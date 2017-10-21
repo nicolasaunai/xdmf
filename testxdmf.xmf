@@ -6,7 +6,7 @@
             <Topology TopologyType="3DCoRectMesh" NumberOfElements="101 12 9"/>
             <Geometry Origin="" Type="ORIGIN_DXDYDZ">
                 <DataItem  Name="Origin" Dimensions="3" NumberType="Float" Precision="8" Format="XML">0. 0. 0.</DataItem>
-                <DataItem  Name="Spacing" Dimensions="3" NumberType="Float" Precision="8" Format="XML">0.1 0.2 0.4</DataItem>
+                <DataItem  Name="Spacing" Dimensions="3" NumberType="Float" Precision="8" Format="XML">0.01 0.2 0.4</DataItem>
             </Geometry>
 
             <Attribute Name="Bx" Center="Node" AttributeType="Scalar">
