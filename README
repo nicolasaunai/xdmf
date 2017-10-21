@@ -1,0 +1,2 @@
+This code tests XDMF for different types of datasets, including scalars and vectors
+contained in a HDF5 file
