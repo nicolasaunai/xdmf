@@ -3,33 +3,33 @@
 <Xdmf Version="3.0">
     <Domain>
         <Grid Name="TestGrid">
-            <Topology TopologyType="3DCoRectMesh" NumberOfElements="101 12 9"/>
+            <Topology TopologyType="3DCoRectMesh" NumberOfElements="41 21 101"/>
             <Geometry Origin="" Type="ORIGIN_DXDYDZ">
                 <DataItem  Name="Origin" Dimensions="3" NumberType="Float" Precision="8" Format="XML">0. 0. 0.</DataItem>
-                <DataItem  Name="Spacing" Dimensions="3" NumberType="Float" Precision="8" Format="XML">0.01 0.2 0.4</DataItem>
+                <DataItem  Name="Spacing" Dimensions="3" NumberType="Float" Precision="8" Format="XML">1 0.5 0.2</DataItem>
             </Geometry>
 
             <Attribute Name="Bx" Center="Node" AttributeType="Scalar">
-                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="101 12 9">test.h5:/Bx</DataItem>
+                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="21 41 101">test.h5:/Bx</DataItem>
             </Attribute>
             <Attribute Name="By" Center="Node" AttributeType="Scalar">
-                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="101 12 9">test.h5:/By</DataItem>
+                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="41 21 21">test.h5:/By</DataItem>
             </Attribute>
             <Attribute Name="Bz" Center="Node" AttributeType="Scalar">
-                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="101 12 9">test.h5:/Bz</DataItem>
+                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="41 21 101">test.h5:/Bz</DataItem>
             </Attribute>
 
 
             <Attribute Name="Bvec" Center="Node" AttributeType="Vector">
-                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="101 12 9 3">test.h5:/Bvec</DataItem>
+                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="41 21 101 3">test.h5:/Bvec</DataItem>
             </Attribute>
 
 
             <Attribute Name="Bvec2" Center="Node" AttributeType="Vector">
-                <DataItem ItemType="Function"  Function="Join($0, $1, $2)" Dimensions="101 12 9 3">
-                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="101 12 9">test.h5:/Bx</DataItem>
-                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="101 12 9">test.h5:/By</DataItem>
-                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="101 12 9">test.h5:/Bz</DataItem>
+                <DataItem ItemType="Function"  Function="Join($0, $1, $2)" Dimensions="41 21 101 3">
+                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="41 21 101 1">test.h5:/Bx</DataItem>
+                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="41 21 101 1">test.h5:/By</DataItem>
+                <DataItem ItemType="Uniform" Format="HDF" NumberType="Float" Precision="4" Dimensions="41 21 101 1">test.h5:/Bz</DataItem>
                 </DataItem>
             </Attribute>
 
